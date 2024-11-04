@@ -1,23 +1,16 @@
-maior_acerto = 10
-menor_acerto = 6  # Inicializa com o máximo de acertos possível
+maior_acerto = 1
+menor_acerto = 6  
 total_alunos = 30
 soma_notas = 0
-
-# Loop para cada aluno
 while True:
-    # Inicializa a contagem de acertos para o aluno atual
     acertos = 0
-
-    # Pergunta as respostas do aluno
     print("Responda as questões com A, B, C, D ou E:")
     for i in range(10):
         resposta = input(f"Questão {i+1}: ").upper()
-        if resposta == gabarito[i]:
+        if resposta == gabarito[i]: # type: ignore
             acertos += 1
-
-    # Calcula a nota do aluno
     nota = acertos
-
+   
     # Imprime o resultado do aluno
     print(f"Você acertou {acertos} questões e sua nota é {nota}.")
 
